@@ -1,5 +1,9 @@
+import os
+from dotenv import load_dotenv
+
 def main():
-    admins = {1, 2, 3}
+    load_dotenv()
+    admins = os.getenv('ADMINS')
     print(f'{admins=}')
 
 if __name__ == '__main__':
